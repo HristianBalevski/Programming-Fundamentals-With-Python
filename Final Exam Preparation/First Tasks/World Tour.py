@@ -1,35 +1,36 @@
-my_stops = input()
-data = input()
+text = input()
+commands = input()
 
-while data != 'Travel':
-    info = data.split(':')
+while commands != "Travel":
+    command = commands.split(':')
 
-    if info[0] == 'Add Stop':
-        index = int(info[1])
-        text = info[2]
+    if command[0] == 'Add Stop':
+        index = int(command[1])
+        string = command[2]
 
-        if 0 <= index < len(my_stops):
-            my_stops = my_stops[:index] + text + my_stops[index:]
-            print(my_stops)
+        if 0 <= index < len(text):
+            text = text[:index] + string + text[index:]
+            print(text)
         else:
-            print(my_stops)
-    elif info[0] == 'Remove Stop':
-        start_index = int(info[1])
-        end_index = int(info[2])
+            print(text)
 
-        if 0 <= start_index <= len(my_stops) and start_index <= end_index <= len(my_stops):
-            my_stops = my_stops[:start_index] + my_stops[end_index + 1:]
-            print(my_stops)
+    elif command[0] == 'Remove Stop':
+        start_index = int(command[1])
+        end_index = int(command[2])
+
+        if 0 <= start_index < len(text) and 0 <= end_index < len(text):
+            text = text[:start_index] + text[end_index + 1:]
+            print(text)
         else:
-            print(my_stops)
-    elif info[0] == 'Switch':
-        old_string = info[1]
-        new_string = info[2]
-        if old_string in my_stops:
-            while old_string in my_stops:
-                my_stops = my_stops.replace(old_string, new_string)
-            print(my_stops)
+            print(text)
+    elif command[0] == 'Switch':
+        old_string = command[1]
+        new_string = command[2]
+
+        if old_string in text:
+            text = text.replace(old_string, new_string)
+            print(text)
         else:
-            print(my_stops)
-    data = input()
-print(f"Ready for world tour! Planned stops: {my_stops}")
+            print(text)
+    commands = input()
+print(f"Ready for world tour! Planned stops: {text}")
