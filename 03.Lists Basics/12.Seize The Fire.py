@@ -18,11 +18,13 @@ for fire in level_of_fire:
         effort += value_of_fire * 0.25
         total_fire += value_of_fire
         print(f'- {value_of_fire}')
+        
     elif power_of_fire == 'Medium' and 51 <= value_of_fire <= 80:
         amount_of_water -= value_of_fire
         effort += value_of_fire * 0.25
         total_fire += value_of_fire
         print(f'- {value_of_fire}')
+        
     elif power_of_fire == 'Low' and 1 <= value_of_fire <= 50:
         amount_of_water -= value_of_fire
         effort += value_of_fire * 0.25
