@@ -13,12 +13,14 @@ while legendary_item == '':
                 key_items['shards'] -= 250
                 legendary_item = 'Shadowmourne'
                 break
+                
         elif material == 'fragments':
             key_items['fragments'] += quantity
             if key_items['fragments'] >= 250:
                 key_items['fragments'] -= 250
                 legendary_item = 'Valanyr'
                 break
+                
         elif material == 'motes':
             key_items['motes'] += quantity
             if key_items['motes'] >= 250:
