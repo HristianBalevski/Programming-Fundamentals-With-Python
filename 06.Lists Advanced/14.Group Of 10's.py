@@ -10,8 +10,10 @@ for num in range(boundary):
     list_of_numbers = list(filter(lambda x: x <= boundary, sequence_of_numbers))
     if len(list_of_numbers) == 0:
         print(f"Group of {boundary}'s: {list_of_numbers}")
+        
     while len(list_of_numbers) != 0:
         current_num = list_of_numbers[0]
+        
         if printed == 0:
             print(f"Group of {boundary}'s: {list_of_numbers}")
             printed += 1
