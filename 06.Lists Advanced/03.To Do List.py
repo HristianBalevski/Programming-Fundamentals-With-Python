@@ -2,6 +2,7 @@ list_tasks = []
 
 while True:
     to_do_notes = input()
+    
     if to_do_notes == 'End':
         break
     command = to_do_notes.split('-')
