@@ -1,5 +1,6 @@
 def perfect_number(num: int):
     sum_counter = 0
+    
     for digit in range(1, num):
         if num % digit == 0:
             sum_counter += digit
