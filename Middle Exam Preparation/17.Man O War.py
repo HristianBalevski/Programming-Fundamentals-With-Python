@@ -11,6 +11,7 @@ def is_valid(index, limit):
 data = input().split(' ')
 while data[0] != 'Retire':
     command = data[0]
+    
     if command == 'Fire':
         index = int(data[1])
         damage = int(data[2])
@@ -24,6 +25,7 @@ while data[0] != 'Retire':
         start_index = int(data[1])
         end_index = int(data[2])
         damage = int(data[3])
+        
         if is_valid(start_index, len(pirate_ship)) and is_valid(end_index, len(pirate_ship)):
             for i in range(start_index, end_index + 1):
                 pirate_ship[i] -= damage
@@ -34,12 +36,15 @@ while data[0] != 'Retire':
     elif command == 'Repair':
         index = int(data[1])
         health = int(data[2])
+        
         if is_valid(index, len(pirate_ship)):
             pirate_ship[index] += health
+            
             if pirate_ship[index] > health_capacity:
                 pirate_ship[index] = health_capacity
     elif command == 'Status':
         counter = 0
+        
         for sector in pirate_ship:
             if sector < health_capacity * 0.20:
                 counter += 1
