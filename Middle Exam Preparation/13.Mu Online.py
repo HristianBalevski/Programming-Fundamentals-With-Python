@@ -18,6 +18,7 @@ for index in range(len(data)):
         else:
             print(f"You healed for {value} hp.")
         print(f"Current health: {health} hp.")
+        
     elif command == 'chest':
         bitcoins += value
         if value > last_bitcoins:
@@ -29,6 +30,7 @@ for index in range(len(data)):
             print(f"You slayed {command}.")
         else:
             print(f"You died! Killed by {command}.")
+            
             if index == 0:
                 best_room = 1
             else:
@@ -36,6 +38,7 @@ for index in range(len(data)):
             print(f"Best room: {best_room}")
             break
     previous_health = health
+    
 if health > 0:
     print("You've made it!")
     print(f"Bitcoins: {bitcoins}")
