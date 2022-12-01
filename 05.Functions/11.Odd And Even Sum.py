@@ -1,6 +1,7 @@
 def sum_of_digits(info: str):
     even_list = []
     odd_list = []
+    
     for num in info:
         current_number = int(num)
         if current_number % 2 == 0:
