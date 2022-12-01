@@ -4,6 +4,7 @@ def palindrome_integers(data):
 
     for integer in data:
         list_integers.append(integer)
+        
     for x in list_integers:
         rev_number = x[::-1]
         if rev_number == x:
