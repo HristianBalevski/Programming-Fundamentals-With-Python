@@ -10,6 +10,7 @@ while line != 'Love!':
 
     if cupid_position >= len(neighborhood):
         cupid_position = 0
+        
     if neighborhood[cupid_position] != 0:
         neighborhood[cupid_position] -= 2
         if neighborhood[cupid_position] == 0:
@@ -17,6 +18,7 @@ while line != 'Love!':
     else:
         print(f"Place {cupid_position} already had Valentine's day.")
     line = input()
+    
 print(f"Cupid's last position was {cupid_position}.")
 if sum(neighborhood) == 0:
     print("Mission was successful.")
