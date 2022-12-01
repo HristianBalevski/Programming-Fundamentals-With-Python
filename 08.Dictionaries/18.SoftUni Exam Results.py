@@ -1,6 +1,7 @@
 exam_results = {}
 submissions = {}
 command = input()
+
 while command != 'exam finished':
     data = command.split('-')
     student_name = data[0]
