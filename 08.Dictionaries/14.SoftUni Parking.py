@@ -8,12 +8,14 @@ for info in range(number_of_commands):
 
     if action == 'register':
         license_number = user_data[2]
+        
         if username not in parking:
             parking[username] = []
             parking[username] = license_number
             print(f"{username} registered {license_number} successfully")
         else:
             print(f"ERROR: already registered with plate number {license_number}")
+            
     elif action == 'unregister':
         if username not in parking:
             print(f"ERROR: user {username} not found")
