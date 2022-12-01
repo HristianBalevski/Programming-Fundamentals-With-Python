@@ -1,5 +1,6 @@
 txt = input()
 already_counted = []
+
 for char in txt:
     if char in already_counted or char == ' ':
         continue
