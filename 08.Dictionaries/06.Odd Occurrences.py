@@ -1,8 +1,7 @@
 data = [str(w).lower() for w in input().split()]
 words_to_print = []
 
-for w in data:
-    word = w.lower()
+for word in data:
     count = int(data.count(word))
 
     if count % 2 !=0:
