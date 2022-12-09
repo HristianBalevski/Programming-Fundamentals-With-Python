@@ -1,23 +1,15 @@
-dictionary = {}
-excellent_students = {}
-number_of_rows = int(input())
+number_of_iteration = int(input())
+students_dictionary = {}
 
-for num in range(number_of_rows):
+for iteration in range(number_of_iteration):
     name = input()
     grade = float(input())
 
-    if name not in dictionary:
-        dictionary[name] = []
-        dictionary[name] = [grade]
-    else:
-        dictionary[name].append(grade)
-for key, value in dictionary.items():
-    number_of_grades = len(value)
-    sum_of_grades = sum(value)
-    average_grade = sum_of_grades / number_of_grades
+    if name not in students_dictionary:
+        students_dictionary[name] = []
+    students_dictionary[name].append(grade)
 
+for key, value in students_dictionary.items():
+    average_grade = sum(value) / len(value)
     if average_grade >= 4.50:
-        excellent_students[key] = []
-        excellent_students[key] = average_grade
-for names, grades in excellent_students.items():
-    print(f'{names} -> {grades:.2f}')
+        print(f"{key} -> {average_grade:.2f}")
