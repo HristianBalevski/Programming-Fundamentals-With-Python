@@ -1,14 +1,11 @@
-words = input().split()
-words_lower = []
-already_printed = []
+data = [str(w).lower() for w in input().split()]
+words_to_print = []
 
-for element in words:
-    words_lower.append(element.lower())
+for w in data:
+    word = w.lower()
+    count = int(data.count(word))
 
-for index in range(len(words_lower)):
-    searched_word = words_lower[index]
-    
-    if words_lower.count(searched_word) % 2 != 0:
-        if searched_word not in already_printed:
-            print(searched_word, end=" ")
-            already_printed.append(searched_word)
+    if count % 2 !=0:
+        if word not in words_to_print:
+            words_to_print.append(word)
+print(" ".join(words_to_print))
