@@ -1,19 +1,19 @@
-student_dictionary = {}
-command = input()
+data = input()
+my_dict = {}
 
-while command != 'end':
-    data = command.split(" : ")
-    course_name = data[0]
-    student_name = data[1]
+while data != 'end':
+    data = data.split(' : ')
 
-    if course_name not in student_dictionary:
-        student_dictionary[course_name] = []
-        student_dictionary[course_name] = [student_name]
-    else:
-        student_dictionary[course_name].append(student_name)
-    command = input()
+    course = data[0]
+    name = data[1]
 
-for course, student in student_dictionary.items():
-    print(f"{course}: {len(student)}")
-    result = '\n-- '.join(student)
-    print(f"-- {result}")
+    if course not in my_dict:
+        my_dict[course] = []
+    my_dict[course].append(name)
+
+    data = input()
+
+for key, value in my_dict.items():
+    print(f"{key}: {len(value)}")
+    for i in range(len(value)):
+        print(f"-- {value[i]}")
